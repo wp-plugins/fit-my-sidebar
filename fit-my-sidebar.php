@@ -177,6 +177,10 @@ a.tooltip {
   background-color:#55FF55;
   transition: 0.7s;
   }
+  
+table.fms_config {
+    width: 350px;
+}
 
 </style>
 
@@ -187,7 +191,7 @@ function savePop() {
 </script>
 
 
-<div class="fms-config-page" style="width:900px;">
+<div class="fms-config-page" style="width:750px;">
     <h1>Fit My Sidebar</h1>
     <p>Fit My Sidebar lets you control which sidebar widgets show up based on the length of a specific post.</p>
     <p>The plugin estimates page length in terms of rows. Since each website is different, you'll need to fine-tune below.</p>
@@ -195,7 +199,7 @@ function savePop() {
     
     
     
-    <div class="postbox-container" style="width:900px;">
+    <div class="postbox-container">
       <div id="normal-sortables" class="meta-box-sortables ui-sortable">
          <div id="referrers" class="postbox">
             <h3 class="hndle"><span>Settings</span></h3>
@@ -203,7 +207,9 @@ function savePop() {
                                       
             <div class='inside'>
                 <form action='' method='POST'>
-                <table class="fms_config">
+                <div style="float:left;">
+                    <h4>Configuration Options</h4>
+                    <table class="fms_config">
                         <thead><tr><td style="width:250px;"></td><td style="width:50px;"></td><td></td>
 
                         </tr></thead>
@@ -213,7 +219,6 @@ function savePop() {
                                     Pixels Per Row
                                     <a class="tooltip" href="#">
                                         [?]
-                                        <div class="callout"></div>
                                         <span> Ex: for font-size 12 and line-height 1.5em, set Pixels Per Row to 18 </span>
                                     </a>
         
@@ -257,42 +262,45 @@ function savePop() {
 
                         </tbody>
                     </table>
-                    
-                    <h4>Post Lengths (in Rows)</h4>
+                </div>
+                <div style="float:left;">
+                    <h4>Classify Post Lengths (in Rows)</h4>
                     <table class="fms_config">
-                        <thead>
-                            <tr>
-                                <th>Short</th>
-                                <th>Medium</th>
-                                <th>Long</th>
-                                <th>Longer</th>
-                            </tr>
-                        </thead>
                         <tbody>
+                            <thead><tr>
+                                <td style="width:100px;"></td><td style="width:50px;"></td><td></td>
+                            </tr></thead>
                             <tr>
+                                <td>Short</td>
                                 <td><input name="short"         type="text" value="{$row_configs['short']}"  /></td>
+                            </tr>
+                            <tr>
+                                <td>Medium</td>
                                 <td><input name="medium"        type="text" value="{$row_configs['medium']}" /></td>
+                            </tr>
+                            <tr>
+                                <td>Long</td>
                                 <td><input name="long"          type="text" value="{$row_configs['long']}"   /></td>
+                            </tr>
+                            <tr>
+                                <td>Longer</td>
                                 <td><input name="longer"        type="text" value="{$row_configs['longer']}" /></td>
+                            </tr>
                             </tr>
                         </tbody>
                     </table>
+                </div>
                     <br/>
+                    <div class="clear"></div>
                     <input type='submit' name='save' value='Save' class='button-primary' />&nbsp;
                     {$update_msg}
-                  </form>
+                </form>
             </div>
          </div>
       </div>
     </div>
-</div>
-
-<br/>
- 
- 
-<div class="fms-config-page" style="width:900px;">
-
-<!-- UI content disabled until functionality is added
+    
+    <!-- UI content disabled until functionality is added
 
     <div class="postbox-container" style="width:900px;">
       <div id="normal-sortables" class="meta-box-sortables ui-sortable">
@@ -324,12 +332,16 @@ function savePop() {
                 </div>
             </div>
         </div>
-    </div>
-    
-END COMMENT -->
-<br/>   
-<p>Fine-tuning: If you'd like to debug and see which widgets appear for which posts, add <code>[fitmysidebar-debug]</code> in a shortcode Widget or <code>&lt;?php echo do_shortcode('[fitmysidebar-debug]'); ?&gt;</code> in a PHP Code Widget. The debug information will only appear for users logged in as administrators.</p>
 
+    
+    END COMMENT -->
+    <br/>   
+    <p><b>Fine-tuning:</b> If you'd like to debug and see which widgets appear for which posts, add <code>[fitmysidebar-debug]</code> in a shortcode Widget or <code>&lt;?php echo do_shortcode('[fitmysidebar-debug]'); ?&gt;</code> in a PHP Code Widget. The debug information will only appear for users logged in as administrators.</p>
+
+    
+</div>
+
+<br/>
 HEREDOC;
 
     }
