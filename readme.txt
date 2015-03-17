@@ -59,9 +59,12 @@ find this plugin on wordpress.org and contact us through the support tab.
 
 == Screenshots ==
 
-1. The extra widget options added.
+1. Admin Config page
+2. Config (Debug) assist pannel
+3. The extra widget options added.
 
 == Changelog ==
+
 = 0.9 =
 * Initial release
 
