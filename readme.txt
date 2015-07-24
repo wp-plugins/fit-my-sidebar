@@ -3,7 +3,7 @@ Contributors: Relevad
 Tags: widget, widgets, admin, show, hide, sidebar, content, plugin, content, filter, widget logic, widget context
 Requires at least: 3.1
 Tested up to: 4.1.1
-Stable tag: 0.9
+Stable tag: 0.9.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,10 @@ Allows individualized configuration to show/hide sidebar widgets based on an est
 Afterward configure each widget in your sidebars between those 4 options or any/all pages which is the default.
 
 Based on Display Widgets by sswells http://strategy11.com/display-widgets/
+
+Requirements:
+
+ * PHP version >= 5.3.0 (Dependent on 5.3 functionality. Plugin will not work without 5.3 or higher)
 
 == Installation ==
 
@@ -64,6 +68,10 @@ find this plugin on wordpress.org and contact us through the support tab.
 3. The extra widget options added.
 
 == Changelog ==
+
+= 0.9.1 =
+
+* Added warning message and prevented activation of plugin for versions < php 5.3.0
 
 = 0.9 =
 * Initial release

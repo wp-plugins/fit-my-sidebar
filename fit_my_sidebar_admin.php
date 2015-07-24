@@ -1,31 +1,5 @@
 <?php
 /*
-Plugin Name: Fit My Sidebar
-Plugin URI: http://relevad.com/wp-plugins/
-Description: Adds configurable content length to show/hide sidebar widgets (applies only to is_single). Based on 'display widget' by Strategy11
-Author: Relevad
-Author URI: http://relevad.com
-Version: 0.9
-*/
-
-/*  Copyright 2015 Relevad Corporation (email: stock-widget@relevad.com) 
- 
-    This program is free software; you can redistribute it and/or modify 
-    it under the terms of the GNU General Public License as published by 
-    the Free Software Foundation; either version 3 of the License, or 
-    (at your option) any later version. 
- 
-    This program is distributed in the hope that it will be useful, 
-    but WITHOUT ANY WARRANTY; without even the implied warranty of 
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
-    GNU General Public License for more details. 
- 
-    You should have received a copy of the GNU General Public License 
-    along with this program; if not, write to the Free Software 
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
-*/
-
-/*
 // Change the hook this is triggered on with a bit of custom code. Copy and paste into your theme functions.php or a new plugin.
 add_filter('fms_callback_trigger', 'fms_callback_trigger');
 function fms_callback_trigger(){
